@@ -1,0 +1,20 @@
+Función encontrarDosMaximos(numeros, inicio, fin):
+    Si inicio == fin:
+        // Solo un número en el subarray
+        Retornar (numeros[inicio], -∞)
+
+    mitad = (inicio + fin) / 2
+
+    // Dividir el array en dos mitades
+    (max1Izquierda, max2Izquierda) = encontrarDosMaximos(numeros, inicio, mitad)
+    (max1Derecha, max2Derecha) = encontrarDosMaximos(numeros, mitad + 1, fin)
+
+    // Combinar los resultados
+    Si max1Izquierda > max1Derecha:
+        max1 = max1Izquierda
+        max2 = máximo(max2Izquierda, max1Derecha)
+    Sino:
+        max1 = max1Derecha
+        max2 = máximo(max2Derecha, max1Izquierda)
+
+    Retornar (max1, max2)

@@ -1,0 +1,22 @@
+Función encontrarDosMaximos(listaClientes, inicio, fin):
+    Si inicio == fin:
+        Retornar una lista con el cliente en 'inicio' y un cliente nulo
+
+    Mitad = (inicio + fin) / 2
+
+    maximosIzquierda = encontrarDosMaximos(listaClientes, inicio, Mitad)
+    maximosDerecha = encontrarDosMaximos(listaClientes, Mitad + 1, fin)
+
+    max1Izquierda = maximosIzquierda[0]
+    max2Izquierda = maximosIzquierda[1]
+    max1Derecha = maximosDerecha[0]
+    max2Derecha = maximosDerecha[1]
+
+    Si max1Izquierda.scoring > max1Derecha.scoring:
+        max1 = max1Izquierda
+        max2 = máximo de (max2Izquierda, max1Derecha)
+    Sino:
+        max1 = max1Derecha
+        max2 = máximo de (max2Derecha, max1Izquierda)
+
+    Retornar [max1, max2]

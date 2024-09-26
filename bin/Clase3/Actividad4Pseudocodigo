@@ -1,0 +1,12 @@
+función encontrar_n_mayores(lista, n)
+    si el tamaño de la lista es menor o igual a n
+        ordenar la lista en orden descendente
+        devolver los primeros n elementos
+
+    mitad = tamaño de la lista / 2
+    mayores_izquierda = encontrar_n_mayores(lista[0:mitad], n)
+    mayores_derecha = encontrar_n_mayores(lista[mitad+1:tamaño_lista], n)
+
+    combinar ambas listas de mayores (izquierda y derecha)
+    ordenar los combinados y devolver los primeros n elementos
+fin

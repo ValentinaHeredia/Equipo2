@@ -1,0 +1,13 @@
+Función encontrarClienteMaximo(clientes, inicio, fin):
+    Si inicio == fin:
+        Retornar clientes[inicio]
+
+    mitad = (inicio + fin) / 2
+
+    maxClienteIzquierda = encontrarClienteMaximo(clientes, inicio, mitad)
+    maxClienteDerecha = encontrarClienteMaximo(clientes, mitad + 1, fin)
+
+    Si maxClienteIzquierda.scoring > maxClienteDerecha.scoring:
+        Retornar maxClienteIzquierda
+    Sino:
+        Retornar maxClienteDerecha

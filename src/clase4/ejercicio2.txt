@@ -1,0 +1,49 @@
+Inicio
+
+Definir clase Comprobante
+    Atributos:
+        String nombre
+        int valor
+    Método constructor Comprobante(nombre, valor)
+        Asignar nombre
+        Asignar valor
+
+Definir función comprarMonedaExtranjera(Comprobante[] Comprobantes, int monto) retorna Comprobante[]
+    Ordenar Comprobantes de mayor a menor por valor
+    Crear array Cambio de tamaño 50
+    Inicializar índice j a 0
+
+    Para i desde 0 hasta longitud de Comprobantes - 1 hacer
+        Mientras monto es mayor o igual que Comprobantes[i].valor hacer
+            Restar Comprobantes[i].valor de monto
+            Asignar Cambio[j] a Comprobantes[i]
+            Incrementar j en 1
+        Fin Mientras
+    Fin Para
+
+    Retornar Cambio
+
+Fin función
+
+Inicio del programa principal
+    Crear array comprobantes con:
+        nuevo Comprobante("cheque", 500)
+        nuevo Comprobante("monedas", 100)
+        nuevo Comprobante("bono", 50)
+        nuevo Comprobante("billete", 10)
+
+    Definir monto como 2760
+    Llamar a comprarMonedaExtranjera(comprobantes, monto) y asignar resultado a resultado
+
+    Si longitud de resultado es mayor que 0 entonces
+        Imprimir "Comprobantes utilizados:"
+        Para i desde 0 hasta longitud de resultado - 1 hacer
+            Imprimir "Comprobante: " + resultado[i].nombre + ", Valor: " + resultado[i].valor
+        Fin Para
+    Sino
+        Imprimir "No es posible dar el cambio exacto."
+    Fin Si
+
+Fin del programa principal
+
+complejidad algoritmica : O(nlogn)+O(n⋅m)

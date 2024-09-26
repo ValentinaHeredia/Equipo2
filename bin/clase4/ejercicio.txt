@@ -1,0 +1,31 @@
+función monedasDisponibles(monedas, monto):
+    Ordenar las monedas de menor a mayor
+    ordenar(monedas)
+
+    Inicializar la lista para almacenar el cambio
+
+    Recorrer las monedas de mayor a menor
+    para i desde longitud(monedas) - 1 hasta 0:
+        Mientras el monto sea mayor o igual que la moneda actual
+            Restar el valor de la moneda del monto
+            Agregar el valor de la moneda al cambio
+
+    Retornar verdadero si el monto es cero, lo que indica que se logró el cambio exacto
+    si monto == 0:
+        devolver verdadero
+    sino:
+        devolver falso
+
+función principal:
+    Definir el conjunto de monedas y el monto a cambiar
+    monedas = [50, 25, 10, 5]
+    monto = 580
+
+    Llamar a la función y almacenar el resultado
+    resultado = monedasDisponibles(monedas, monto)
+
+    Imprimir si es posible hacer el cambio exacto
+    imprimir "¿Hay un cambio exacto?: " + resultado
+
+
+//Complejidad: O(n log n + m)

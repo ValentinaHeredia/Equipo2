@@ -1,0 +1,14 @@
+Objeto 1: peso 2, valor 4
+Objeto 2: peso 5, valor 2
+Objeto 3: peso 6, valor 1
+Objeto 4: peso 7, valor 6
+
+paso 1: 
+se crea la tabla de programación  dinámica.
+
+paso 2: 
+se completa la tabla.
+El objeto 1 (peso 2 y valor 4) se añade en la tabla a partir de la capacidad 2.
+El objeto 2 es sumado con el objeto 1 en la capacidad 7.
+El objeto 3 al no ser mayor que la suma de los objetos 1 y 2 y no poder sumarse tampoco, no entra a la tabla.
+En la capacidad 10 el objeto 1 y 4 se suman y dan un valor final de 10.

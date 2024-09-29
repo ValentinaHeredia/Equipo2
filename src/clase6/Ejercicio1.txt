@@ -1,0 +1,15 @@
+Objeto 1: peso 3, valor 4
+Objeto 2: peso 4, valor 5
+Objeto 3: peso 2, valor 3
+
+paso 1: 
+se crea la tabla de programación  dinámica.
+
+paso 2: 
+se completa la tabla.
+Objeto 1 (peso 3 y valor 4) no podemos agregarlo porque el peso es menor a 3 por lo tanto en la tabla[1][j] = 0.
+A partir de j = 3 se puede agregar el objeto 1 a la tabla con un valor de 4.
+El objeto 2 (peso 4 y valor 5) para la capacidad 4 vemos si agregar el objeto 1 o 2 o si se pueden combinar.
+Para una capacidad de 6 solo se puede añadir el objeto 2.
+El objeto 3 (peso 2 y valor 3) se añade en j = 2, en una capacidad 5 se puede añadir los objetos 1 y 3.
+Para una capacidad 6 se puede añadir los objetos 2 y 3.

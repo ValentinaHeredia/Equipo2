@@ -1,0 +1,61 @@
+clase Mercancia
+    atributos
+        nombre: cadena
+        peso: entero
+        valor: entero
+        valorPorPeso: decimal
+
+    constructor Mercancia(nombre: cadena, peso: entero, valor: entero)
+        establecer this.nombre = nombre
+        establecer this.peso = peso
+        establecer this.valor = valor
+        establecer this.valorPorPeso = valor / peso  // Relación valor/peso
+
+fin clase
+
+función cargarCamion(Mercancias: lista de Mercancia, capacidadCamion: entero) -> lista de Mercancia
+    ordenar Mercancias por valorPorPeso en orden descendente
+    resultado: lista de Mercancia = nueva lista
+    capacidadRestante: entero = capacidadCamion
+
+    para i desde (longitud(Mercancias) - 1) hacia 0 hacia atrás
+        si Mercancias[i].peso <= capacidadRestante entonces
+            mientras Mercancias[i].peso <= capacidadRestante hacer
+                capacidadRestante = capacidadRestante - Mercancias[i].peso
+                agregar nueva Mercancia(Mercancias[i].nombre, Mercancias[i].peso, Mercancias[i].valor) a resultado
+            fin mientras
+        fin si
+
+        si capacidadRestante > 0 y i == 0 entonces
+            pesoFraccion: entero = capacidadRestante
+            valorFraccion: entero = Mercancias[i].valor * (capacidadRestante / Mercancias[i].peso)
+            agregar nueva Mercancia(Mercancias[i].nombre, pesoFraccion, valorFraccion) a resultado
+            capacidadRestante = 0
+        fin si
+
+        si capacidadRestante == 0 entonces
+            salir del bucle
+        fin si
+    fin para
+
+    retornar resultado
+fin función
+
+función main()
+    // Ejemplo de mercancías
+    Mercancias: lista de Mercancia = [
+        nueva Mercancia("Lechuga", 50, 100),
+        nueva Mercancia("Tomate", 30, 70),
+        nueva Mercancia("Perejil", 10, 25)
+    ]
+    capacidadCamion: entero = 343  // Capacidad del camión
+
+    resultado: lista de Mercancia = cargarCamion(Mercancias, capacidadCamion)
+    imprimir "Artículos cargados en el camión:"
+
+    para cada mercancia en resultado hacer
+        imprimir "Nombre: " + mercancia.nombre + ", Peso: " + mercancia.peso + ", Valor: " + mercancia.valor
+    fin para
+fin función
+
+complejidad algoritmica: O(nlogn)+O(n)+O(n)=O(nlogn)

@@ -1,0 +1,11 @@
+1- Inyección SQL: El atacante intenta insertar o manipular consultas SQL maliciosas para acceder a bases de datos de la plataforma web. Cross-Site Scripting (XSS): El atacante intenta insertar scripts maliciosos en las páginas web de la plataforma que son ejecutadas por los navegadores de otros usuarios. Fuerza bruta de contraseñas: El atacante intenta adivinar las contraseñas de las cuentas de los usuarios mediante un ataque de fuerza bruta, probando todas las combinaciones posibles hasta encontrar la correcta. 
+2-Monitoreo de tráfico web, Análisis de autenticación y filtrado de contenido.
+3-La poda alfa-beta es una técnica utilizada para mejorar la eficiencia de algoritmos de búsqueda como el algoritmo Minimax. Aunque la poda alfa-beta se utiliza principalmente en juegos, se podría adaptar de manera conceptual para la detección de ataques en escenarios donde se consideren múltiples posibles "acciones" que el atacante puede tomar.
+4-
+                           ¿Ataque detectado?
+                            /           \
+                        Sí               No
+                        / \
+          Inyección SQL       XSS / Fuerza Bruta
+              /    \                  /     \
+     Bloquear   Alerta      Bloquear/Alerta   Bloquear/Alerta

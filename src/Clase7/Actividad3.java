@@ -49,6 +49,8 @@ public class Actividad3 {
             imprimirCamino(origen, destino, predecesor);
             System.out.println(destino);
         }
+
+        scanner.close();
     }
 
     public static void imprimirSolucion(int[][] distancias, int n) {

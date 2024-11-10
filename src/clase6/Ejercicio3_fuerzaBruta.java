@@ -38,7 +38,6 @@ public class Ejercicio3_fuerzaBruta {
 
             if (costoTotal <= presupuesto && beneficioTotal > maxBeneficio) {
                 maxBeneficio = beneficioTotal;
-                // Crear una copia de la lista seleccionados
                 mejorSeleccion = new ArrayList<>(seleccionados);
             }
         }

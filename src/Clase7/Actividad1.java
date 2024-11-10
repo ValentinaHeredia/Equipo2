@@ -1,7 +1,5 @@
 package Clase7;
 
-import java.util.Arrays;
-
 public class Actividad1 {
 
     final static int INF = 99999;

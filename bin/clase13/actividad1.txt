@@ -1,0 +1,15 @@
+1- Coloca reinas fila por fila, probando cada columna, y retrocede si no es posible colocar una reina en una fila.
+
+2- Guarda la solución y, si se busca más, continúa explorando otras posibles soluciones.
+
+3- El algoritmo retrocede, moviendo la reina en la fila anterior y probando nuevas posiciones.
+
+4- El algoritmo elimina la reina de la fila anterior y prueba con otras posiciones.
+
+5- Muestra el estado de las variables, la posición de las reinas, y el proceso de exploración y retroceso.
+
+6- Solo cambiaría el valor de N a 8, ya que el algoritmo se adapta automáticamente.
+
+7- Aumentaría exponencialmente debido al aumento en las combinaciones posibles.
+
+8- Asegura que las reinas no se ataquen entre sí, evitando configuraciones inválidas y optimizando el algoritmo.
